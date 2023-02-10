@@ -34,9 +34,9 @@ public class GlobalHandlerException {
 	public ResponseEntity NoBookingFoundException(BookingAlreadyExistsException b) {
 		return new ResponseEntity(message3,HttpStatus.NOT_FOUND);
 	}
-	@ExceptionHandler(value=BookingAlreadyExistsException.class)
+	@ExceptionHandler(value=TransactionRecordNotFoundException.class)
 	public ResponseEntity TransactionRecordNotFoundException(TransactionRecordNotFoundException b) {
-		return new ResponseEntity(message4,HttpStatus.NOT_FOUND);
+		return new ResponseEntity(message4,HttpStatus.ALREADY_REPORTED);
 	}
 	
 
